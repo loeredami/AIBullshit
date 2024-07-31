@@ -1,3 +1,5 @@
+# Note: I made this a long time ago, and i didn't think about optimizing it as I was just exploring the topic, I may eventually rewrite this all in go.
+
 requirements: fucking none, i made it all using standard libraries.
 
 
