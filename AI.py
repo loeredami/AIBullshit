@@ -143,7 +143,6 @@ class Network:
                 random.choice(self.allNodes).weight += (
                     funcs.randomDirection() * changeCap
                 )
-        self.name = funcs.create_new_name(self.name)
 
     def copy(self):
         n = Network(len(self.inputs), len(self.outputs), self.limit)
@@ -225,9 +224,9 @@ def load_network(filename, brainCellLimit=10):
         elif cell[0] == "Functional":
             all_cells.append(Functional(cell[1],cell[2]))
     for i, cell in enumerate(network_data):
-        if len(cell[4]) == 0:
+        if len(cell[3]) == 0:
             continue
-        for _id in cell[4]:
+        for _id in cell[3]:
             all_cells[i].add_input(all_cells[_id])
 
     for cell in all_cells:
