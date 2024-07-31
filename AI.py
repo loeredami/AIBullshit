@@ -71,25 +71,6 @@ class Network:
         self.outputs = [
             Output(funcs.randomDirection() * start_spread) for _ in range(outPutSize)
         ]
-        posInputs = 0
-        posOutputs = 0
-        negInputs = 0
-        negOutputs = 0
-        cons = 0
-        for _in in self.inputs:
-            if _in.weight > 0:
-                posInputs += 1
-            else:
-                negInputs += 1
-        for _ou in self.outputs:
-            if _ou.weight > 0:
-                posOutputs += 1
-            else:
-                negOutputs += 1
-            cons += len(_ou.inputs)
-        self.name = funcs.generate_name(
-            posInputs, negInputs, posOutputs, negOutputs, cons
-        )
         for output in self.outputs:
             output.add_input(random.choice(self.inputs))
         self.functional = []
