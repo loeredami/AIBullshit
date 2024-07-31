@@ -25,7 +25,7 @@ for network in networks:
 
 # let's say by bull shit means network1 was a good girl/boy/dog/cat/ect.
 
-off_spring1, off_spring2 = network.copy(), network.copy()
+off_spring1, off_spring2 = network1.copy(), network1.copy()
 
 off_spring2.mutate(50, 4) # 50 is the maximum random amount of changes done to the network, a change for example can be either the adding or removal of a node/neuron, or a random connection or even a random weight redistribution
 
